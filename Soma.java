@@ -10,7 +10,7 @@ public class Soma {
 		System.out.println("Digite um número: ");
 		num1 = entrada.nextInt();
 
-		System.out.println("Digite outrom número: ");
+		System.out.println("Digite outro número: ");
 		num1 = entrada.nextInt();
 
 		soma = num1 + num2;
