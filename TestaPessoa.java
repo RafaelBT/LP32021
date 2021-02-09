@@ -7,6 +7,9 @@ public class TestaPessoa {
 		// Inicialização do objeto eu;
 
 		eu = new Pessoa(); // Chamada ao construtor
+
+		eu.dizNome();
+
 		eu.nome = "Rafael";
 
 		eu.dizNome();

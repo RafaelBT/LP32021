@@ -7,6 +7,11 @@ public class Pessoa {
 	// Atributo nome do tipo String
 	public String nome;
 
+	// Construtor
+	public Pessoa() {
+		this.nome = "Ninguém";
+	}
+
 	// Método que dá um comportamento
 	public void dizNome() {
 		System.out.printf("Oi, eu sou %s!\n", this.nome);
