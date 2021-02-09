@@ -10,7 +10,11 @@ public class TestaPessoa {
 		eu = new Pessoa("Rafael"); // Chamada ao construtor
 		outro = new Pessoa();
 
+		outro.dáNome("Alguém");
+
 		eu.dizNome();
 		outro.dizNome();
+
+		System.out.println(eu.pegaNome());
 	}
 }

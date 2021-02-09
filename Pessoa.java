@@ -5,7 +5,9 @@
 
 public class Pessoa {
 	// Atributo nome do tipo String
-	public String nome;
+	// Implemenando o encapsulamento: atributos de um objeto só são visível
+	// e modificáveis para a própria classe
+	private String nome;
 
 	// Construtor
 	public Pessoa() {
@@ -20,5 +22,13 @@ public class Pessoa {
 	// Método que dá um comportamento
 	public void dizNome() {
 		System.out.printf("Oi, eu sou %s!\n", this.nome);
+	}
+
+	public String pegaNome() {
+		return this.nome;
+	}
+
+	public void dáNome(String nome) {
+		this.nome = nome;
 	}
 }
