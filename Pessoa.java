@@ -12,6 +12,11 @@ public class Pessoa {
 		this.nome = "Ninguém";
 	}
 
+	// Construtor com argumento
+	public Pessoa(String nome) {
+		this.nome = nome;
+	}
+
 	// Método que dá um comportamento
 	public void dizNome() {
 		System.out.printf("Oi, eu sou %s!\n", this.nome);

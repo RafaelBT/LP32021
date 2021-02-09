@@ -2,16 +2,15 @@
 public class TestaPessoa {
 
 	public static void main(String[] args) {
-		// Declaração de pessoa
+		// Declaração das pessoas
 		Pessoa eu;
-		// Inicialização do objeto eu;
+		Pessoa outro;
 
-		eu = new Pessoa(); // Chamada ao construtor
-
-		eu.dizNome();
-
-		eu.nome = "Rafael";
+		// Inicialização dos objetos;
+		eu = new Pessoa("Rafael"); // Chamada ao construtor
+		outro = new Pessoa();
 
 		eu.dizNome();
+		outro.dizNome();
 	}
 }
