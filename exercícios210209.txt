@@ -1,0 +1,5 @@
+1) Modifique o código TestePessoa para que ele escreva o nome de vocês
+
+2) Implemente um objeto reprensentando um conta bancária (use a classe Pessoa)
+
+3) Crie uma classe de livre escolha (menos pessoe conta bancária), com alguns atributos e alguns métodos
