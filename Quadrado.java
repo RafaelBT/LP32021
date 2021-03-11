@@ -1,18 +1,28 @@
-public class Bola {
-	private int tamanho;
+import processing.core.PApplet;
+
+public class Quadrado implements Desenhável {
+	private int lado;
 	private int posx;
 	private int posy;
 	private int dx = 0;
 	private int dy = 0;
 
-	public Bola(int tamanho, int posx, int posy) {
-		this.tamanho = tamanho;
+	private PApplet lugar;
+
+	public Quadrado(int lado, int posx, int posy, PApplet lugar) {
+		this.lado = lado;
 		this.posx = posx;
 		this.posy = posy;
+		this.lugar = lugar;
 	}
 
-	public void setaTamanho(int tamanho) {
-		this.tamanho = tamanho;
+	public void desenha() {
+		this.lugar.square(posx - lado/2, posy - lado/2, lado);
+	}
+
+
+	public void setaLado(int lado) {
+		this.lado = lado;
 	}
 
 	public void setaX(int posx) {
@@ -23,8 +33,8 @@ public class Bola {
 		this.posy = posy;
 	}
 
-	public int pegaTamanho() {
-		return this.tamanho;
+	public int pegaLado() {
+		return this.lado;
 	}
 
 	public int pegaX() {
@@ -54,11 +64,6 @@ public class Bola {
 		this.posx = this.posx + this.dx;
 		this.posy = this.posy + this.dy;
 	}
-
-	public void interage(Bola outra) {
-		//Faz algo que modifica as bolas
-	}
-
 
 
 }

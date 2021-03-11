@@ -1,15 +1,25 @@
-public class Bola {
+import processing.core.PApplet;
+
+public class SuperBola implements Desenhável {
 	private int tamanho;
 	private int posx;
 	private int posy;
 	private int dx = 0;
 	private int dy = 0;
 
-	public Bola(int tamanho, int posx, int posy) {
+	private PApplet lugar;
+
+	public SuperBola(int tamanho, int posx, int posy, PApplet lugar) {
 		this.tamanho = tamanho;
 		this.posx = posx;
 		this.posy = posy;
+		this.lugar = lugar;
 	}
+
+	public void desenha() {
+		this.lugar.circle(posx, posy, tamanho);
+	}
+
 
 	public void setaTamanho(int tamanho) {
 		this.tamanho = tamanho;
@@ -54,11 +64,6 @@ public class Bola {
 		this.posx = this.posx + this.dx;
 		this.posy = this.posy + this.dy;
 	}
-
-	public void interage(Bola outra) {
-		//Faz algo que modifica as bolas
-	}
-
 
 
 }
