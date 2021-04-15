@@ -1,6 +1,6 @@
 import processing.core.PApplet;
 
-public class Quadrado implements Desenhável {
+public class Quadrado implements Animável {
 	private int lado;
 	private int posx;
 	private int posy;
@@ -19,6 +19,21 @@ public class Quadrado implements Desenhável {
 	public void desenha() {
 		this.lugar.square(posx - lado/2, posy - lado/2, lado);
 	}
+
+	public void move() {
+		this.posx = this.posx - this.dx;
+		this.posy = this.posy + this.dy;
+		ajusta();
+	}
+
+	public void ajusta() {
+		if (posx < 0) posx = posx + lugar.width;
+		else if (posx > lugar.width) posx = posx - lugar.width;
+
+		if (posy < 0) posy = posy + lugar.width;
+		else if (posy > lugar.height) posy = posy - lugar.height;
+	}
+
 
 
 	public void setaLado(int lado) {
@@ -60,10 +75,6 @@ public class Quadrado implements Desenhável {
 		return this.dy;
 	}
 
-	public void move() {
-		this.posx = this.posx + this.dx;
-		this.posy = this.posy + this.dy;
-	}
 
 
 }
